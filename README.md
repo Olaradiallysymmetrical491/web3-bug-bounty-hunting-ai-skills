@@ -1,202 +1,117 @@
-# web3-skills-brain
+<div align="center">
 
-> **18 Claude Code skill files for smart contract security — distilled from 2,749 Immunefi reports, 681 DeFiHack reproductions, and real hunt experience.**
+# web3-bounty-ai-skills
 
-[![Skills](https://img.shields.io/badge/skills-18-blue)](./skills/) [![Immunefi Reports](https://img.shields.io/badge/immunefi%20reports%20analyzed-2%2C749-orange)](./skills/00-start-here.md) [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+Smart contract bug bounty skills for Claude Code, Claude AI, and other AI tools.
+Built from 2,749 Immunefi reports, 681 DeFiHack reproductions, and real hunts.
 
----
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Skills](https://img.shields.io/badge/skills-11-blue)]()
+[![Immunefi](https://img.shields.io/badge/Immunefi%20reports-2%2C749-orange)]()
+[![DeFiHackLabs](https://img.shields.io/badge/DeFiHack%20reproductions-681-red)]()
 
-## What Is This?
-
-Most smart contract hunters work the same way: 10 browser tabs, grep commands pasted from memory, Foundry templates rewritten from scratch each hunt, reports drafted from a blank page.
-
-This repo is a **knowledge brain** you load into Claude Code. It turns months of learning into a skills pack that's immediately available in any hunt conversation.
-
-```
-You → "load my web3 brain" → Claude reads the chain → you start hunting
-```
-
-Built from:
-- **2,749 Immunefi vulnerability reports** (406 Critical, 616 High)
-- **$100M+ in paid bounties** analyzed for patterns
-- **681 DeFiHackLabs** reproduced exploits
-- **166 Nethermind** professional audit reports
-- Trail of Bits, ConsenSys, SlowMist, Cyfrin methodology
-- Live hunt experience (real targets, real findings)
+</div>
 
 ---
 
-## The Skill Chain
+Most hunters still do everything manually. Read contracts in a browser, grep from memory, rewrite Foundry templates each hunt, draft reports from scratch.
 
-Read in order. Each file ends with `→ NEXT`.
+These skill files load into Claude Code (or any AI) and give it a complete smart contract security knowledge base — target scoring, bug patterns, grep arsenal, PoC templates, report format, and real case studies. One `claude` command, then start hunting.
 
-| # | File | What's Inside |
-|---|------|---------------|
-| 00 | `00-start-here.md` | Master index, how to navigate |
-| 01 | `01-foundation.md` | Hunter mindset, 10-point target scorecard, recon setup |
-| 02 | `02-bug-classes.md` | All 10 bug classes with patterns + real paid examples |
-| 03 | `03-grep-arsenal.md` | Master grep patterns for every bug class |
-| 04 | `04-poc-and-foundry.md` | Foundry PoC writing, 18 exploit templates, cheatcodes |
-| 05 | `05-triage-report-examples.md` | 7-Question validation gate, 20 real paid reports |
-| 06 | `06-methodology-research.md` | ToB, SlowMist, ConsenSys, Immunefi, Cyfrin, Nethermind |
-| 07 | `07-case-study-role-misconfiguration.md` | Case study: role misconfiguration bug class (real hunt) |
-| 08 | `08-ai-tools.md` | Shannon, LuaN1ao, SmartGuard, CAI Framework |
-| 09 | `09-case-study-hardened-l2-bridge.md` | Defense study: what unhuntable looks like (25 vectors tested) |
-| 10 | `36-solidity-audit-mcp.md` | MCP: Slither + Aderyn + SWC inside Claude Code |
-
-**After file 05 you can hunt independently. Files 06–10 are advanced tools.**
+Works with: **Claude Code**, **Claude.ai**, **Cursor**, **any AI that reads files**.
 
 ---
 
-## Quick Stats
+## Files
 
-| Metric | Number |
-|--------|--------|
-| Immunefi reports analyzed | 2,749 |
-| Protocols covered | 51 |
-| Critical reports | 406 |
-| High reports | 616 |
-| Total paid by Immunefi | $100M+ |
-| Avg critical payout | $50K–$2M |
-| Nethermind reports | 166 |
-| DeFiHackLabs reproductions | 681 |
+| File | Contents |
+|------|----------|
+| [`00-start-here.md`](./00-START-HERE.md) | Index + how to navigate |
+| [`01-foundation.md`](./01-foundation.md) | Hunter mindset, target scoring (10-point scorecard), recon setup |
+| [`02-bug-classes.md`](./02-bug-classes.md) | All 10 bug classes — patterns, Solidity examples, real Immunefi findings |
+| [`03-grep-arsenal.md`](./03-grep-arsenal.md) | Grep/regex patterns for every bug class |
+| [`04-poc-and-foundry.md`](./04-poc-and-foundry.md) | 18 Foundry PoC templates — fill in address, run `forge test` |
+| [`05-triage-report-examples.md`](./05-triage-report-examples.md) | 7-question validation gate, Immunefi report format, 20 paid examples |
+| [`06-methodology-research.md`](./06-methodology-research.md) | Trail of Bits, SlowMist, ConsenSys, Cyfrin, Nethermind methodology |
+| [`07-case-study-role-misconfiguration.md`](./07-case-study-role-misconfiguration.md) | Full hunt walkthrough — role misconfiguration bug, real findings |
+| [`08-ai-tools.md`](./08-ai-tools.md) | Shannon, SmartGuard, CAI Framework, LuaN1ao agent setup |
+| [`09-case-study-hardened-l2-bridge.md`](./09-live-hunt-zksync.md) | Defense study — 25 attack vectors tested on a hardened L2 bridge |
+| [`36-solidity-audit-mcp.md`](./36-solidity-audit-mcp.md) | MCP server — run Slither + Aderyn + SWC inside Claude Code |
 
----
-
-## Install in 60 Seconds
-
-### Option A — Add to an existing project
-
-```bash
-# Clone into your project's Claude skills directory
-git clone https://github.com/shuvonsec/web3-bounty-ai-skills.git .claude/skills/web3-brain
-
-# Open Claude Code in your project
-claude
-```
-
-Then in any conversation:
-```
-Read all files in .claude/skills/web3-brain/ starting with 00-start-here.md
-```
-
-### Option B — Standalone hunt workspace
-
-```bash
-# Clone and open directly
-git clone https://github.com/shuvonsec/web3-bounty-ai-skills.git
-cd web3-bounty-ai-skills
-claude
-```
-
-Then tell Claude:
-```
-You are my web3 security assistant. Read 00-start-here.md then follow the chain.
-When ready, I'll give you a target.
-```
-
-### Option C — Load specific skills only
-
-```bash
-# If you only need bug patterns + PoC templates:
-claude
-> Read 02-bug-classes.md and 04-poc-and-foundry.md
-```
+Read in order. Each file ends with `→ NEXT`. After file 05 you can hunt on your own.
 
 ---
 
 ## The 10 Bug Classes
 
-Everything in this repo maps back to one of these:
-
 ```
-01  Accounting Desync       ← Most common Critical (37% of payouts)
-02  Access Control          ← Most common High
-03  Incomplete Path         ← Missing modifier on sibling function
-04  Off-by-One              ← Boundary operators, index errors
-05  Oracle Price            ← TWAP manipulation, stale prices
-06  ERC4626 Vaults          ← Share inflation, rounding attacks
-07  Reentrancy              ← Cross-function, cross-contract, read-only
-08  Flash Loan              ← Price manipulation, economic attacks
-09  Signature Replay        ← Cross-chain, missing nonce/chainId
-10  Proxy/Upgrade           ← Uninitialized impl, storage collisions
+01  Accounting Desync    →  most common Critical (37% of all payouts)
+02  Access Control       →  most common High
+03  Incomplete Path      →  missing modifier on a sibling function
+04  Off-by-One           →  boundary operators, index errors
+05  Oracle Price         →  TWAP manipulation, stale prices
+06  ERC4626 Vaults       →  share inflation, rounding attacks
+07  Reentrancy           →  cross-function, cross-contract, read-only
+08  Flash Loan           →  price manipulation, economic attacks
+09  Signature Replay     →  cross-chain replay, missing nonce/chainId
+10  Proxy/Upgrade        →  uninitialized implementation, storage collision
 ```
 
-**The one rule that explains 19% of all Criticals:**
-
-> "Read ALL sibling functions. If `vote()` has a modifier, check `poke()`, `reset()`, `harvest()`. The missing modifier on the sibling IS the bug."
+> Read ALL sibling functions. If `vote()` has a modifier, check `poke()`, `reset()`, `harvest()`.
+> The missing modifier on the sibling is the bug. This one rule explains 19% of all Criticals.
 
 ---
 
-## What You Get
+## Setup
 
-### 1. Target Scoring (before you waste time)
-A 10-point scorecard that tells you HUNT vs SKIP in 5 minutes:
-- TVL, payout, codebase size, audit quality, competition level
-- Score ≥ 6 → hunt. Score < 6 → move on.
+**Option 1 — drop into your existing project:**
 
-### 2. Bug Class Patterns (while you read code)
-For each of the 10 classes:
-- What it looks like in Solidity
-- Grep patterns to find it instantly
-- Real paid example from Immunefi
-- Validation checklist
-
-### 3. Foundry PoC Templates (when you find something)
-18 ready-to-run exploit templates:
-- Role misconfiguration, accounting desync, flash loan, reentrancy
-- Just fill in the target address and run `forge test`
-
-### 4. Report Format (when you submit)
-- 7-Question Gate: is this actually submittable?
-- Immunefi/Bugcrowd report template
-- 20 real paid reports as examples
-
-### 5. AI Integration (to move faster)
-- Shannon (AI pentester) integration
-- SmartGuard agent workflow
-- CAI Framework for automated analysis
-- Solidity MCP server: Slither + Aderyn in Claude Code
-
----
-
-## Pair This With
-
-- **[claude-bug-bounty](https://github.com/shuvonsec/claude-bug-bounty)** — Point at a target, get a full attack surface map + report. Uses these skills internally.
-- **[public-skills-builder](https://github.com/shuvonsec/public-skills-builder)** — Feed 500 HackerOne/GitHub writeups, get skill files like these back out.
-
----
-
-## The Workflow
-
+```bash
+git clone https://github.com/shuvonsec/web3-bounty-ai-skills.git .claude/skills/web3
+claude
 ```
-1. New target appears
-         ↓
-2. Load this brain in Claude Code
-         ↓
-3. Run target scorecard (01-foundation.md)
-         ↓
-4. Claude reads contracts + runs grep patterns (02, 03)
-         ↓
-5. Candidate bugs surface
-         ↓
-6. Run 7-Question Gate (05-triage-report-examples.md)
-         ↓
-7. Build PoC from template (04-poc-and-foundry.md)
-         ↓
-8. Write report from format (05-triage-report-examples.md)
-         ↓
-9. Submit
+
+Then in Claude Code:
+```
+Read all files in .claude/skills/web3/ starting from 00-START-HERE.md
+```
+
+**Option 2 — standalone workspace:**
+
+```bash
+git clone https://github.com/shuvonsec/web3-bounty-ai-skills.git
+cd web3-bounty-ai-skills
+claude
+```
+
+**Option 3 — just the essentials:**
+```
+Read 02-bug-classes.md and 04-poc-and-foundry.md
 ```
 
 ---
 
-## License
+## Numbers
 
-MIT. Use freely. Build on it.
+| | |
+|---|---|
+| Immunefi reports analyzed | 2,749 |
+| Critical findings | 406 |
+| High findings | 616 |
+| Total paid by Immunefi | $100M+ |
+| DeFiHackLabs reproductions | 681 |
+| Nethermind audit reports | 166 |
+| Protocols covered | 51 |
 
 ---
 
-*Built during live hunts. Every pattern in here has been tested against real deployed contracts.*
+## Related
 
-*If this helped you find a bug, star the repo.*
+| Repo | What it does |
+|------|-------------|
+| [claude-bug-bounty](https://github.com/shuvonsec/claude-bug-bounty) | Point at a target → full attack surface map + Immunefi/Bugcrowd report |
+| [public-skills-builder](https://github.com/shuvonsec/public-skills-builder) | Feed 500 public writeups → get skill files like these back out |
+
+---
+
+MIT License. Use it, fork it, build on it.
